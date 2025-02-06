@@ -1,12 +1,17 @@
-import {useState} from "react";
+import {Dispatch, SetStateAction, useState} from "react";
 import "./navbar.css";
 import accountService from "../configs/accountServices";
 import analyticsService from "../configs/analyticsServices";
 import managerServices from "../configs/panelManagerServices";
 import Service from "../service/service";
 
-function Navbar() {
-    const [selectedService, setSelectedService] = useState("Объявления");
+type navigationProps = {
+    selectedService: string, 
+    setSelectedService: (itemName : string) => void;
+}
+
+function Navbar(props : navigationProps) {
+    const {selectedService, setSelectedService} = props;
 
     function handleClickBtn(serviceName : string) {
         setSelectedService(serviceName);

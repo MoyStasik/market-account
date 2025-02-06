@@ -1,10 +1,10 @@
 import "./header.css";
 
-function Header() {
+function Header({selectedService} : {selectedService: string}) {
 
     return (
         <>
-            <div className="header">Patefon</div>
+            <div className="header">{selectedService}</div>
         </>
     );
 }

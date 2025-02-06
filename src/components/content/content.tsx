@@ -1,10 +1,14 @@
 import Header from "../header/header";
 
-function Content() {
+type contentProps = {
+    selectedService: string,
+};
+
+function Content(props : contentProps) {
     return (
         <>
-            <Header />
-            
+            <Header selectedService={props.selectedService}/>
+
         </>
     )
 }
