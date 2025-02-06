@@ -1,11 +1,17 @@
+import service from "../configs/serviceConfigType";
 import "./service.css";
 
 
-function Service() {
+function Service(props : service) {
+    const {serviceName, serviceImg} = props;
+
     return (
         <>
-            <span></span>
-            <img src="" alt="..." />
+            <div className="service">
+                <img className="service__img" src={serviceImg} alt="..." />
+                <span className="service__span">{serviceName}</span>
+            </div>
+            
         </>
     );
 }
