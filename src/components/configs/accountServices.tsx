@@ -1,17 +1,17 @@
-import service from "./serviceConfigType";
+import {service} from "./serviceConfigType";
 
 const accountService : service[] = [
     {
         serviceName: "Настройки",
-        serviceImg: "/src/assets/settings.svg"
+        serviceImg: "/src/assets/settings.svg",
     },
     {
         serviceName: "Поддержка",
-        serviceImg: "/src/assets/Contacts.svg"
+        serviceImg: "/src/assets/Contacts.svg",
     },
     {
         serviceName: "Выйти",
-        serviceImg: "/src/assets/IconLogout.svg"
+        serviceImg: "/src/assets/IconLogout.svg",
     },
 ]
 

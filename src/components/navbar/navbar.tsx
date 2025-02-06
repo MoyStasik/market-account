@@ -6,7 +6,12 @@ import managerServices from "../configs/panelManagerServices";
 import Service from "../service/service";
 
 function Navbar() {
-    const [selectedService, setSelectedService] = useState(null);
+    const [selectedService, setSelectedService] = useState("Объявления");
+
+    function handleClickBtn(serviceName : string) {
+        setSelectedService(serviceName);
+        console.log(serviceName);
+    }
 
     return (
         <div className="navbar">
@@ -14,19 +19,19 @@ function Navbar() {
                 <img className="navbar-header__img" src="/src/assets/Patefon.svg" alt="logo" />
                 <span className="navbar-header__span">Patefon</span>
             </div>
-            <div className="navbar-manager">
+            <div className="navbar-manager" >
                 <span className="navbar-manager__span">Панель управления</span>
-                {managerServices.map((item) => <Service {...item} />)}
+                {managerServices.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
             </div>
             <hr className="navbar-separator" />
             <div className="navbar-analytics">
                 <span className="navbar-analytics__span">Аналитика</span>
-                {analyticsService.map((item) => <Service {...item} />)}
+                {analyticsService.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
             </div>
             <hr className="navbar-separator" />
             <div className="navbar-account">
                 <span className="navbar-account__span">ИП Станислав Евгеньевич</span>
-                {accountService.map((item) => <Service {...item} />)}
+                {accountService.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
             </div>
         </div>
     )

@@ -1,22 +1,22 @@
-import service from "./serviceConfigType";
+import {service} from "./serviceConfigType";
 
 
 const analyticsService : service[] = [
     {
         serviceName: "Рейтинг",
-        serviceImg: ""
+        serviceImg: "",
     },
     {
         serviceName: "Продвижение",
-        serviceImg: ""
+        serviceImg: "", 
     },
     {
         serviceName: "Финансы",
-        serviceImg: ""
+        serviceImg: "", 
     },
     {
         serviceName: "Отзывы",
-        serviceImg: ""
+        serviceImg: "",
     },
 ]
 

@@ -1,14 +1,14 @@
-import service from "./serviceConfigType";
+import {service} from "./serviceConfigType";
 
 
 const managerServices : service[] = [
     {
         serviceName: "Объявления",
-        serviceImg: ""
+        serviceImg: "",
     },
     {
         serviceName: "Заказы",
-        serviceImg: ""
+        serviceImg: "",
     },
 ]
 
