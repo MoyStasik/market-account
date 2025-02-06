@@ -4,7 +4,7 @@ function Header() {
 
     return (
         <>
-            <div className="header">Market</div>
+            <div className="header">Patefon</div>
         </>
     );
 }

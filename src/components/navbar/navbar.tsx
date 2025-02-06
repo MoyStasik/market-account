@@ -1,11 +1,14 @@
+import {useState} from "react";
 import "./navbar.css";
 
 function Navbar() {
+    const [selectedService, setSelectedService] = useState(null);
+
     return (
         <div className="navbar">
             <div className="navbar-header">
-                <img src="" alt="logo" />
-                <span className="navbar-header__span">Market</span>
+                <img className="navbar-header__img" src="/src/assets/Patefon.svg" alt="logo" />
+                <span className="navbar-header__span">Patefon</span>
             </div>
             <div className="navbar-manager">
                 <span className="navbar-manager__span">Панель управления</span>
@@ -42,15 +45,15 @@ function Navbar() {
             <div className="navbar-account">
                 <span className="navbar-account__span">ИП Станислав Евгеньевич</span>
                 <div className="navbar-settings">
-                    <img src="" alt="..." />
+                    <img className="navbar-settings__img" src="/src/assets/settings.svg" alt="..." />
                     <span className="navbar-settings__span">Настройки</span>
                 </div>
                 <div className="navbar-support">
-                    <img src="" alt="..." />
+                    <img className="navbar-support__img" src="/src/assets/Contacts.svg" alt="..." />
                     <span className="navbar-support__span">Поддержка</span>
                 </div>
                 <div className="navbar-out">
-                    <img src="" alt="..." />
+                    <img className="navbar-out__img" src="/src/assets/IconLogout.svg" alt="..." />
                     <span className="navbar-out__span">Выйти</span>
                 </div>
             </div>

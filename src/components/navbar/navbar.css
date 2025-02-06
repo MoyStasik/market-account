@@ -2,17 +2,23 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(49, 155, 217);
+    /* background-color: rgb(49, 155, 217); */
+    background-color:rgb(10, 71, 115);
     padding: 10px;
 }
 
 .navbar-header {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .navbar-header__span { 
     font-size: 25px;
     font-family: sans-serif;
+    color: #fff;
 }
 
 .navbar-separator {
@@ -24,10 +30,14 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+    padding: 10px;
 }
 
-.navbar-analytics__span {
+.navbar-analytics__span,
+.navbar-account__span,
+.navbar-manager__span {
     color: #fff;
+    margin-bottom: 5px;
 }
 
 .navbar-rating,
@@ -37,7 +47,6 @@
 .navbar-settings,
 .navbar-support,
 .navbar-out,
-.navbar-account,
 .manager-orders,
 .manager-advertisements
  {
@@ -66,20 +75,24 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
-}
-
-.navbar-account__span {
-    color: #fff;
-    margin-bottom: 5px;
+    padding: 10px;
 }
 
 .navbar-manager {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    padding: 10px;
 }
 
-.navbar-manager__span {
-    color: #fff;
-    margin-bottom: 5px;
+.navbar-settings__img,
+.navbar-out__img,
+.navbar-support__img {
+    height: 25px;
+    width: 25px;
+}
+
+.navbar-header__img {
+    width: 60px;
+    height: 60px
 }
