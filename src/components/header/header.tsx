@@ -1,12 +1,15 @@
+import { useContext } from "react";
+import { serviceContext } from "../../App";
 import "./header.css";
 
-function Header({selectedService} : {selectedService: string}) {
-
+function Header() {
+    const selectedService = useContext(serviceContext);
+    
     return (
         <>
             <div className="header">
                 <div className="header-user-info">
-                    <div className="">
+                    <div className="header-user-info__span">
                         На главную
                     </div>
                     <div className="">

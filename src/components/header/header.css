@@ -1,2 +1,28 @@
 .header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-color);
+}
+
+.header-user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 15px;
+    padding: 10px;
+}
+
+.service-name {
+    padding: 10px 20px;
+}
+
+.service-name__span {
+    color: var(--white-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.header-user-info__span {
+    color: var(--white-color);
+    font-family: Arial, Helvetica, sans-serif;
 }

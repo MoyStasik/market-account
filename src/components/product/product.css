@@ -1,0 +1,29 @@
+.product-card {
+    color: #fff;
+    background-color: rgb(161, 152, 152);
+    border-radius: 15px;
+    height: 250px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.5s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
+
+.product-info__img {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
+}

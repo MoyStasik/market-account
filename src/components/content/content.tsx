@@ -2,15 +2,15 @@ import AdvertisementContainter from "../advertisementContainer/advertisementCont
 import Header from "../header/header";
 import "./content.css";
 
-type contentProps = {
-    selectedService: string,
-};
+function Content() {
 
-function Content(props : contentProps) {
+
     return (
         <>
-            <Header selectedService={props.selectedService}/>
-            <AdvertisementContainter />
+            <div className="Content">
+                <Header/>
+                <AdvertisementContainter />
+            </div>
         </>
     )
 }
