@@ -9,8 +9,10 @@ type contentProps = {
 function Content(props : contentProps) {
     return (
         <>
-            <Header selectedService={props.selectedService}/>
-            <AdvertisementContainter />
+            <div className="Content">
+                <Header selectedService={props.selectedService}/>
+                <AdvertisementContainter />
+            </div>
         </>
     )
 }

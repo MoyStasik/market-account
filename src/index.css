@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --white-color: #ffffff;
+  /* --navbar-color: rgb(10, 71, 115); */
+  --navbar-color: #2e1114;
+  /* --blue-color: rgb(49, 155, 217); */
+  --blue-color: #83677b;
 }
 
 a {
@@ -50,6 +56,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: var(--white-color);
 }
 button:hover {
   border-color: #646cff;
@@ -68,6 +75,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--blue-color);
   }
 }
