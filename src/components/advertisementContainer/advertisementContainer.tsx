@@ -1,3 +1,5 @@
+import { products } from "../configs/products";
+import Product from "../product/product";
 import "./advertisementContainer.css";
 
 function AdvertisementContainter() {
@@ -14,12 +16,7 @@ function AdvertisementContainter() {
                     </div>
                 </div>
                 <div className="advertisement-container-products">
-                    <img src="" alt="..." />
-                    <img src="" alt="..." />
-                    <img src="" alt="..." />
-                    <img src="" alt="..." />
-                    <img src="" alt="..." />
-                    <img src="" alt="..." />
+                    {products.map((item) => <Product key={item.id} {...item} />)}
                 </div>
             </div>
         </>
