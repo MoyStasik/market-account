@@ -3,6 +3,7 @@ import { products } from "../configs/products";
 import Product from "../product/product";
 import "./advertisementContainer.css";
 import Modal from "../modal/modal";
+import CreateProductForm from "../createProductForm/createProductForm";
 
 function AdvertisementContainter() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,9 +23,7 @@ function AdvertisementContainter() {
                     <div className="advertise-add">
                         <button className="advertise-add__button" onClick={openModal}>+ Добавить</button>
                         <Modal open={isModalOpen}>
-                            <div>
-                                sadadqweqwe
-                            </div>
+                            <CreateProductForm />
                         </Modal>
                     </div>
                 </div>
