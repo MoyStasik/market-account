@@ -10,7 +10,7 @@ function CreateProductForm() {
                         <Input type="file" placeholder="" />
                         <Input type="text" placeholder="Введите название товара" />
                         <Input type="text" placeholder="Введите цену товара" />
-                        <button>Создать</button>
+                        <button className="form-content__button">Создать</button>
                     </div>
                 </form>
             </div>

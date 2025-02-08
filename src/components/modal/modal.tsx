@@ -1,5 +1,6 @@
 import { ReactElement, useRef } from "react";
 import { createPortal } from "react-dom";
+import "./modal.css"
 
 function Modal({children, open} : {children : ReactElement, open : boolean}) {
     const modalRef = useRef<HTMLDialogElement | null>(null);
@@ -12,7 +13,7 @@ function Modal({children, open} : {children : ReactElement, open : boolean}) {
     }
     
     return createPortal(
-        <dialog ref={modalRef} open={open}>{children}</dialog>,
+        <dialog className="modal" ref={modalRef} open={open}>{children}</dialog>,
          document.getElementById("modal")!);
 }
 
