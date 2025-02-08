@@ -52,12 +52,12 @@ button {
   color: var(--white-color);
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #523d4c;
 }
-button:focus,
+/*button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
