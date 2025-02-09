@@ -22,7 +22,7 @@ function AdvertisementContainter() {
                     </div>
                     <div className="advertise-add">
                         <button className="advertise-add__button" onClick={openModal}>+ Добавить</button>
-                        <Modal open={isModalOpen}>
+                        <Modal open={isModalOpen} handleSetIsModalOpen={setIsModalOpen}>
                             <CreateProductForm />
                         </Modal>
                     </div>

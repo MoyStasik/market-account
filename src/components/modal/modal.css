@@ -6,3 +6,14 @@
     border-radius: 10px;
     z-index: 100;
 }
+
+.header-modal {
+    display: flex;
+    justify-content: end;
+    padding: 0px 10px 10px 0px;
+    margin-bottom: 10px;
+}
+
+.header-modal__img {
+    cursor: pointer;
+}

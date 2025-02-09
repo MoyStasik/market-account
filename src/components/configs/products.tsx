@@ -29,5 +29,29 @@ export const products : product[] = [
         imgPath: "/src/assets/boots.jpeg",
         price: 2000,
         productName: "Кроссовки Puma"
-    }
+    },
+    {
+        id: 5,
+        imgPath: "/src/assets/boots.jpeg",
+        price: 1000,
+        productName: "Кроссовки Nike"
+    },
+    {
+        id: 6,
+        imgPath: "/src/assets/boots.jpeg",
+        price: 2000,
+        productName: "Кроссовки Puma"
+    },
+    {
+        id: 7,
+        imgPath: "/src/assets/boots.jpeg",
+        price: 1000,
+        productName: "Кроссовки Nike"
+    },
+    {
+        id: 8,
+        imgPath: "/src/assets/boots.jpeg",
+        price: 2000,
+        productName: "Кроссовки Puma"
+    },
 ];
