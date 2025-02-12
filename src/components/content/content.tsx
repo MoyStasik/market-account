@@ -3,6 +3,7 @@ import AdvertisementContainter from "../advertisementContainer/advertisementCont
 import Header from "../header/header";
 import "./content.css";
 import { serviceContext } from "../../App";
+import OrderList from "../orderList/orderList";
 // import {
 //   BrowserRouter,
 //   Routes,
@@ -23,6 +24,7 @@ function Content() {
                     </Routes>
                 </BrowserRouter> */}
                 {selectedService === "Объявления" && <AdvertisementContainter />}
+                {selectedService === "Заказы" && <OrderList />}
             </div>
         </>
     )

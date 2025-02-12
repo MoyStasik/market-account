@@ -16,7 +16,7 @@ function Header() {
                         <img className="header-user-notifications__img" src="/src/assets/notification.png" alt="..." />
                     </div>
                     <div className="header-user-avatar">
-                        {/* <img src="" alt="..." /> */}
+                        <img className="header-user-avatar__img" src="/src/assets/default-avatar.svg" alt="..." />
                     </div>
                 </div>
                 <div className="service-name">
