@@ -9,11 +9,11 @@ function Service(props : serviceButton) {
 
     return (
         <>
-            <div className={serviceClass} onClick={clickHandler}>
-                <img className="service__img" src={service.serviceImg} alt="..." />
-                <span className="service__span">{service.serviceName}</span>
-            </div>
             
+                <div className={serviceClass} onClick={clickHandler}>
+                    <img className="service__img" src={service.serviceImg} alt="..." />
+                    <span className="service__span">{service.serviceName}</span>
+                </div>
         </>
     );
 }

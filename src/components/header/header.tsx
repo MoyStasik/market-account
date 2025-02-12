@@ -12,11 +12,11 @@ function Header() {
                     <div className="header-user-info__span">
                         На главную
                     </div>
-                    <div className="">
-                        <img src="" alt="..." />
+                    <div className="header-user-notifications">
+                        <img className="header-user-notifications__img" src="/src/assets/notification.png" alt="..." />
                     </div>
-                    <div className="">
-                        <img src="" alt="..." />
+                    <div className="header-user-avatar">
+                        {/* <img src="" alt="..." /> */}
                     </div>
                 </div>
                 <div className="service-name">
