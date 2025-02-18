@@ -9,6 +9,7 @@ import { useContext, useEffect } from "react";
 function Content({selectedService} : {selectedService: string}) {
     const {setSelectedService} = useContext(ServiceContext);
     useEffect(() => {
+        console.log("i'm here");
         setSelectedService(selectedService);
     }, [selectedService]);
 

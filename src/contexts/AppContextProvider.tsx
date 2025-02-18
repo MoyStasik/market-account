@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import ServiceContext from "./AppContext";
 
-const ServiceProvider = ({children}) => {
+const ServiceProvider = ({children} : {children: ReactNode}) => {
     const [selectedService, setSelectedService] = useState("Объявления");
 
     return (

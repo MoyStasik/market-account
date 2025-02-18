@@ -15,6 +15,12 @@ function Navbar() {
     const serviceRoutes : serviceRoutes = {
         "Объявления": "/",
         "Заказы": "/orders",
+        "Рейтинг": "/rating",
+        "Продвижение": "/forwarding",
+        "Финансы": "/finance",
+        "Отзывы": "/reviews",
+        "Настройки": "/settings",
+        "Поддержка": "/support",
     };
 
     return (
@@ -34,12 +40,22 @@ function Navbar() {
             <hr className="navbar-separator" />
             <div className="navbar-analytics">
                 <span className="navbar-analytics__span">Аналитика</span>
-                {analyticsService.map((item) => <Service key={item.serviceName} service={item} isActive={item.serviceName === selectedService}/>)}
+                {analyticsService.map((item) => {
+                    return <Link key={item.serviceName} to={`${serviceRoutes[item.serviceName]}`}>
+                        <Service service={item} isActive={item.serviceName === selectedService}/>
+                    </Link>
+                }
+                )}
             </div>
             <div className="navbar-section-end">
                 <div className="navbar-account">
                     <span className="navbar-account__span">ИП Станислав Евгеньевич</span>
-                    {accountService.map((item) => <Service key={item.serviceName} service={item} isActive={item.serviceName === selectedService}/>)}
+                    {accountService.map((item) =>{
+                        return <Link key={item.serviceName} to={`${serviceRoutes[item.serviceName]}`}>
+                            <Service service={item} isActive={item.serviceName === selectedService}/>
+                        </Link>
+                        }
+                        )}
                 </div>
             </div>
         </div>

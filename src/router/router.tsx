@@ -12,6 +12,24 @@ const router = createBrowserRouter([
             {
                 path: "/orders", element: <Content selectedService="Заказы"/>    
             },
+            {
+                path: "/rating", element: <Content selectedService="Рейтинг"/>    
+            },
+            {
+                path: "/forwarding", element: <Content selectedService="Продвижение"/>    
+            },
+            {
+                path: "/finance", element: <Content selectedService="Финансы"/>    
+            },
+            {
+                path: "/reviews", element: <Content selectedService="Отзывы"/>    
+            },
+            {
+                path: "/settings", element: <Content selectedService="Настройки"/>    
+            },
+            {
+                path: "/support", element: <Content selectedService="Поддержка"/>    
+            },
         ],
     },
 ]);

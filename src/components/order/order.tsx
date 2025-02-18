@@ -6,7 +6,7 @@ function Order(props: order) {
 
     return (
         <>
-            <a href={`order/${id}`} className="order" onClick={( event) => {event.preventDefault()}}>
+            <div id={`order-${id}`} className="order" onClick={( event) => {event.preventDefault()}}>
                 <div className="order-info">
                     <span>Заказ от {orderDate.getDate()} февраля {orderDate.getFullYear()} г.</span>
                     <span>Доставим {deliveryDate.getDate()} февраля {deliveryDate.getFullYear()}  г.</span>
@@ -15,7 +15,7 @@ function Order(props: order) {
                 <div className="order-img">
                     <img className="order-img__img" src="/src/assets/boots.jpeg" alt="..." />
                 </div>
-            </a>
+            </div>
         </>
     );
 }

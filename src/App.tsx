@@ -9,7 +9,6 @@ export function App() {
     <>
       <ServiceProvider>
         <Navbar ></Navbar>
-        {/* <Content /> */}
         <Outlet />
       </ServiceProvider>
     </>
