@@ -19,7 +19,6 @@ function Navbar() {
 
     function handleClickBtn(serviceName : string) {
         setSelectedService(serviceName);
-        console.log(serviceName);
     }
 
     return (
