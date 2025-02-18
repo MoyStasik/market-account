@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { serviceContext } from "../../App";
 import "./header.css";
+import ServiceContext from "../../contexts/AppContext";
 
 function Header() {
-    const selectedService = useContext(serviceContext);
+    const {selectedService} = useContext(ServiceContext);
     
     return (
         <>
@@ -12,11 +12,11 @@ function Header() {
                     <div className="header-user-info__span">
                         На главную
                     </div>
-                    <div className="">
-                        <img src="" alt="..." />
+                    <div className="header-user-notifications">
+                        <img className="header-user-notifications__img" src="/src/assets/notification.png" alt="..." />
                     </div>
-                    <div className="">
-                        <img src="" alt="..." />
+                    <div className="header-user-avatar">
+                        <img className="header-user-avatar__img" src="/src/assets/default-avatar.svg" alt="..." />
                     </div>
                 </div>
                 <div className="service-name">

@@ -1,17 +1,25 @@
-import { useContext } from "react";
 import AdvertisementContainter from "../advertisementContainer/advertisementContainer";
 import Header from "../header/header";
 import "./content.css";
-import { serviceContext } from "../../App";
+import OrderList from "../orderList/orderList";
+import ServiceContext from "../../contexts/AppContext";
+import { useContext, useEffect } from "react";
 
-function Content() {
-    const selectedService = useContext(serviceContext);
+
+function Content({selectedService} : {selectedService: string}) {
+    const {setSelectedService} = useContext(ServiceContext);
+    useEffect(() => {
+        setSelectedService(selectedService);
+    }, [selectedService]);
+
+    
 
     return (
         <>
             <div className="Content">
                 <Header/>
                 {selectedService === "Объявления" && <AdvertisementContainter />}
+                {selectedService === "Заказы" && <OrderList />}
             </div>
         </>
     )

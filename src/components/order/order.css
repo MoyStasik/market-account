@@ -1,0 +1,39 @@
+.order {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: rgb(193, 190, 190);
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    padding: 15px;
+    max-width: 1081px;
+    width: 100%;
+    color: var(--white-color);
+}
+
+.order:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-img {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+}
+
+.order-img__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.order:hover {
+    
+}

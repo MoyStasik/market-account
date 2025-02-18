@@ -1,24 +1,21 @@
-// import {Dispatch, SetStateAction, useState} from "react";
 import "./navbar.css";
 import accountService from "../configs/accountServices";
 import analyticsService from "../configs/analyticsServices";
 import managerServices from "../configs/panelManagerServices";
 import Service from "../service/service";
 import { useContext } from "react";
-import { serviceContext } from "../../App";
+import { Link } from "react-router-dom";
+import ServiceContext from "../../contexts/AppContext";
 
-type navigationProps = {
-    setSelectedService: (itemName : string) => void;
-}
+type serviceRoutes = Record<string, string>;
 
-function Navbar(props : navigationProps) {
-    const {setSelectedService} = props;
-    const selectedService = useContext(serviceContext);
+function Navbar() {
+    const {selectedService} = useContext(ServiceContext);
 
-    function handleClickBtn(serviceName : string) {
-        setSelectedService(serviceName);
-        console.log(serviceName);
-    }
+    const serviceRoutes : serviceRoutes = {
+        "Объявления": "/",
+        "Заказы": "/orders",
+    };
 
     return (
         <div className="navbar">
@@ -27,17 +24,22 @@ function Navbar(props : navigationProps) {
             </div>
             <div className="navbar-manager" >
                 <span className="navbar-manager__span">Панель управления</span>
-                {managerServices.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
+                {managerServices.map((item) =>{
+                    return <Link key={item.serviceName} to={`${serviceRoutes[item.serviceName]}`}>
+                        <Service service={item} isActive={item.serviceName === selectedService}/> 
+                    </Link>
+                    }
+                )}
             </div>
             <hr className="navbar-separator" />
             <div className="navbar-analytics">
                 <span className="navbar-analytics__span">Аналитика</span>
-                {analyticsService.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
+                {analyticsService.map((item) => <Service key={item.serviceName} service={item} isActive={item.serviceName === selectedService}/>)}
             </div>
             <div className="navbar-section-end">
                 <div className="navbar-account">
                     <span className="navbar-account__span">ИП Станислав Евгеньевич</span>
-                    {accountService.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
+                    {accountService.map((item) => <Service key={item.serviceName} service={item} isActive={item.serviceName === selectedService}/>)}
                 </div>
             </div>
         </div>
