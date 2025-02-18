@@ -14,7 +14,7 @@ function Modal({children, open, handleSetIsModalOpen} : {children : ReactElement
         }
     }, [open])
     
-    function handleModalClick(event : MouseEvent) {
+    function handleModalClick(event:MouseEvent) {
         if (event.target instanceof HTMLElement) {
             if (event.target.className === "modal") {
                 handleCloseModal();
@@ -27,7 +27,7 @@ function Modal({children, open, handleSetIsModalOpen} : {children : ReactElement
     }
     
     return createPortal(
-        <dialog ref={modalRef} className="modal" onClick={(event: MouseEvent) => handleModalClick(event)}>
+        <dialog ref={modalRef} className="modal" onClick={handleModalClick}>
             <div className="header-modal">
                 <img className="header-modal__img" src="/src/assets/cancel.svg" alt="cnacel-modal" onClick={handleCloseModal} />
             </div>

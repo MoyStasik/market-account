@@ -1,18 +1,21 @@
+import { order } from "../configs/ordersConfig";
 import "./order.css";
 
-function Order() {
+function Order(props: order) {
+    const {id, price, orderDate, deliveryDate} = props;
+
     return (
         <>
-            <div className="order">
+            <a href={`order/${id}`} className="order" onClick={( event) => {event.preventDefault()}}>
                 <div className="order-info">
-                    <span>Заказ от 12 февраля 2025 г.</span>
-                    <span>Доставим 15 февраля 2025 г.</span>
-                    <span>Стоимость: 1000Р</span>
+                    <span>Заказ от {orderDate.getDate()} февраля {orderDate.getFullYear()} г.</span>
+                    <span>Доставим {deliveryDate.getDate()} февраля {deliveryDate.getFullYear()}  г.</span>
+                    <span>Стоимость: {price}Р</span>
                 </div>
                 <div className="order-img">
-                    <img src="" alt="..." />
+                    <img className="order-img__img" src="/src/assets/boots.jpeg" alt="..." />
                 </div>
-            </div>
+            </a>
         </>
     );
 }
