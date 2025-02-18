@@ -3,14 +3,14 @@ import "./service.css";
 
 
 function Service(props : serviceButton) {
-    const {service, isActive, clickHandler} = props;
+    const {service, isActive} = props;
     let serviceClass = "service";
     serviceClass = (isActive === true) ? serviceClass + " active" : serviceClass;
 
     return (
         <>
             
-                <div className={serviceClass} onClick={clickHandler}>
+                <div className={serviceClass}>
                     <img className="service__img" src={service.serviceImg} alt="..." />
                     <span className="service__span">{service.serviceName}</span>
                 </div>

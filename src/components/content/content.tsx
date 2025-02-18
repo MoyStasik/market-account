@@ -3,12 +3,16 @@ import Header from "../header/header";
 import "./content.css";
 import OrderList from "../orderList/orderList";
 import ServiceContext from "../../contexts/AppContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 
 function Content({selectedService} : {selectedService: string}) {
     const {setSelectedService} = useContext(ServiceContext);
-    setSelectedService(selectedService);
+    useEffect(() => {
+        setSelectedService(selectedService);
+    }, [selectedService]);
+
+    
 
     return (
         <>
