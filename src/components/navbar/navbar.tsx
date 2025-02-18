@@ -1,19 +1,21 @@
-// import {Dispatch, SetStateAction, useState} from "react";
 import "./navbar.css";
 import accountService from "../configs/accountServices";
 import analyticsService from "../configs/analyticsServices";
 import managerServices from "../configs/panelManagerServices";
 import Service from "../service/service";
 import { useContext } from "react";
-import { serviceContext } from "../../App";
+import { Link } from "react-router-dom";
+import ServiceContext from "../../contexts/AppContext";
 
-type navigationProps = {
-    setSelectedService: (itemName : string) => void;
-}
+type serviceRoutes = Record<string, string>;
 
-function Navbar(props : navigationProps) {
-    const {setSelectedService} = props;
-    const selectedService = useContext(serviceContext);
+function Navbar() {
+    const {selectedService, setSelectedService} = useContext(ServiceContext);
+
+    const serviceRoutes : serviceRoutes = {
+        "Объявления": "/",
+        "Заказы": "/orders",
+    };
 
     function handleClickBtn(serviceName : string) {
         setSelectedService(serviceName);
@@ -27,7 +29,12 @@ function Navbar(props : navigationProps) {
             </div>
             <div className="navbar-manager" >
                 <span className="navbar-manager__span">Панель управления</span>
-                {managerServices.map((item) => <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/>)}
+                {managerServices.map((item) =>{
+                    return <Link to={`${serviceRoutes[item.serviceName]}`}>
+                        <Service key={item.serviceName}  clickHandler={() => handleClickBtn(item.serviceName)} service={item} isActive={item.serviceName === selectedService}/> 
+                    </Link>
+                    }
+                )}
             </div>
             <hr className="navbar-separator" />
             <div className="navbar-analytics">

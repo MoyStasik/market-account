@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { serviceContext } from "../../App";
 import "./header.css";
+import ServiceContext from "../../contexts/AppContext";
 
 function Header() {
-    const selectedService = useContext(serviceContext);
+    const {selectedService} = useContext(ServiceContext);
     
     return (
         <>

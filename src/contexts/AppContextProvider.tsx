@@ -1,17 +1,14 @@
-// import React from "react";
+import { useState } from "react";
+import ServiceContext from "./AppContext";
 
-// const Context = React.createContext(null);
+const ServiceProvider = ({children}) => {
+    const [selectedService, setSelectedService] = useState("Объявления");
 
-// export const AppContextProvide = ({ children, ...props}) => {
-//     const context = useCreateAppContext(props);
-//     return <Context.Provider value={context}>{children}</Context.Provider>
-// };
+    return (
+        <ServiceContext.Provider value={{selectedService, setSelectedService}} >
+            {children}
+        </ServiceContext.Provider>
+    );
+}
 
-// export function useAppContext() {
-//     const context = React.useContext(Context);
-//     if (!context) {
-//         throw new Error("Use app context within provider");
-//     }
-
-//     return context;
-// }
+export default ServiceProvider;

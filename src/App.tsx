@@ -1,19 +1,18 @@
-import { createContext, useState } from 'react';
 import './App.css';
-import Content from './components/content/content';
 import Navbar from './components/navbar/navbar'
-
-
-export const serviceContext = createContext("");
+import { Outlet } from 'react-router-dom';
+import ServiceProvider from './contexts/AppContextProvider';
 
 export function App() {
-  const [serviceState, setServiceState] = useState("Объявления");
 
   return (
-    <serviceContext.Provider value={serviceState}>
-      <Navbar setSelectedService={(itemName : string) => setServiceState(itemName)}></Navbar>
-      <Content />
-      
-    </serviceContext.Provider>
+    <>
+      <ServiceProvider>
+        <Navbar ></Navbar>
+        {/* <Content /> */}
+        <Outlet />
+      </ServiceProvider>
+    </>
+    
   )
 }
