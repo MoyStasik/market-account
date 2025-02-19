@@ -4,6 +4,7 @@ import "./content.css";
 import OrderList from "../orderList/orderList";
 import ServiceContext from "../../contexts/AppContext";
 import { useContext, useEffect } from "react";
+import Settings from "../settings/settings";
 
 
 function Content({selectedService} : {selectedService: string}) {
@@ -11,7 +12,7 @@ function Content({selectedService} : {selectedService: string}) {
     useEffect(() => {
         console.log("i'm here");
         setSelectedService(selectedService);
-    }, [selectedService]);
+    }, [selectedService, setSelectedService]);
 
     
 
@@ -21,6 +22,7 @@ function Content({selectedService} : {selectedService: string}) {
                 <Header/>
                 {selectedService === "Объявления" && <AdvertisementContainter />}
                 {selectedService === "Заказы" && <OrderList />}
+                {selectedService === "Настройки" && <Settings />}
             </div>
         </>
     )
