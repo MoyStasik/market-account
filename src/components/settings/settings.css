@@ -5,6 +5,7 @@
     flex: 1;
     border-radius: 20px;
     padding: 20px;
+    justify-content: center;
 }
 
 .settings-edit {
@@ -17,7 +18,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
 }
 
 .settings-user-avatar {
@@ -29,9 +29,29 @@
 .settings-user-avatar__img {
     width: 200px;
     height: 200px;
+    border-radius: 100%;
+    margin-bottom: 20px;
 }
 
 .settings-user-avatar__span {
     font-size: 25px;
     color: var(--white-color);
+}
+
+.settings-edit__img {
+    cursor: pointer;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.settings-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.settings-submit {
+    margin-top: 15px;
+    flex: 1;
 }

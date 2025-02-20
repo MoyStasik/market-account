@@ -6,22 +6,11 @@ import Service from "../service/service";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import ServiceContext from "../../contexts/AppContext";
+import { serviceRoutes } from "./serviceRoutes";
 
-type serviceRoutes = Record<string, string>;
 
 function Navbar() {
     const {selectedService} = useContext(ServiceContext);
-
-    const serviceRoutes : serviceRoutes = {
-        "Объявления": "/",
-        "Заказы": "/orders",
-        "Рейтинг": "/rating",
-        "Продвижение": "/forwarding",
-        "Финансы": "/finance",
-        "Отзывы": "/reviews",
-        "Настройки": "/settings",
-        "Поддержка": "/support",
-    };
 
     return (
         <div className="navbar">

@@ -1,15 +1,21 @@
 import "./input.css"
 
-type inputProps = {
-    placeholder : string;
+interface InputProps {
     type: string;
-}
-function Input(props : inputProps) {
+    placeholder: string;
+    isDisabled?: boolean;
+};
+
+const Input: React.FC<InputProps> = ({type, placeholder, isDisabled}) => {
     return (
         <>
-            <input className="input" {...props}></input>
+            {isDisabled && <input  className="input" type={type} placeholder={placeholder} disabled ></input>}
+            {!isDisabled && <input  className="input" type={type} placeholder={placeholder} ></input>}
         </>
     );
 }
 
+
+
 export default Input;
+

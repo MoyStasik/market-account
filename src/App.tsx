@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import ServiceProvider from './contexts/AppContextProvider';
 
 export function App() {
-
+  // добавить изменение сервиса в апп
   return (
     <>
       <ServiceProvider>

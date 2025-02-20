@@ -10,7 +10,6 @@ import Settings from "../settings/settings";
 function Content({selectedService} : {selectedService: string}) {
     const {setSelectedService} = useContext(ServiceContext);
     useEffect(() => {
-        console.log("i'm here");
         setSelectedService(selectedService);
     }, [selectedService, setSelectedService]);
 
