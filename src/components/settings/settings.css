@@ -31,6 +31,7 @@
     height: 200px;
     border-radius: 100%;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .settings-user-avatar__span {
@@ -54,4 +55,8 @@
 .settings-submit {
     margin-top: 15px;
     flex: 1;
+}
+
+.change-avatar-image:hover {
+    opacity: 0.6;
 }

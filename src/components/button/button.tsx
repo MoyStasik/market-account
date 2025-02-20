@@ -6,7 +6,7 @@ type buttonProps = {
 }
 
 function Button(props : buttonProps) {
-    const {onClick, buttonText,} = props;
+    const {onClick, buttonText} = props;
 
     return (
         <button className="btn" onClick={(event) => onClick(event)} >{buttonText}</button>

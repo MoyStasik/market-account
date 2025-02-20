@@ -11,6 +11,7 @@ export const products : product[] = [
         imgPath: "/src/assets/boots.jpeg",
         price: 1000,
         productName: "Кроссовки Nike"
+        
     },
     {
         id: 2,
