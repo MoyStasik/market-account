@@ -1,15 +1,23 @@
 import "./input.css"
 
-type inputProps = {
-    placeholder : string;
+interface InputProps {
     type: string;
-}
-function Input(props : inputProps) {
+    placeholder: string;
+    value: string;
+    OnChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
+    isDisabled?: boolean;
+};
+
+const Input: React.FC<InputProps> = ({type, placeholder, value, OnChange, isDisabled}) => {
     return (
         <>
-            <input className="input" {...props}></input>
+            {isDisabled && <input className="input" type={type} placeholder={placeholder} value={value} onChange={OnChange} disabled></input>}
+            {!isDisabled && <input className="input" type={type} placeholder={placeholder} value={value} onChange={OnChange}></input>}
         </>
     );
 }
 
+
+
 export default Input;
+

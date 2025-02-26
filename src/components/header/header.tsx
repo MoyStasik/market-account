@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import "./header.css";
-import ServiceContext from "../../contexts/AppContext";
+import { Link } from "react-router-dom";
 
-function Header() {
-    const {selectedService} = useContext(ServiceContext);
-    
+function Header({selectedService} : {selectedService: string} ) {
+
     return (
         <>
             <div className="header">
@@ -16,8 +14,10 @@ function Header() {
                         <img className="header-user-notifications__img" src="/src/assets/notification.png" alt="..." />
                     </div>
                     <div className="header-user-avatar">
-                        <img className="header-user-avatar__img" src="/src/assets/default-avatar.svg" alt="..." />
-                    </div>
+                        <Link to="/settings">
+                            <img className="header-user-avatar__img" src="/src/assets/hameleon.jpeg" alt="..." />
+                        </Link>
+                        </div>
                 </div>
                 <div className="service-name">
                     <span className="service-name__span">{selectedService}</span>

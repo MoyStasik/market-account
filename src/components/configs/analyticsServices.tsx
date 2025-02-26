@@ -4,15 +4,15 @@ import {service} from "./serviceConfigType";
 const analyticsService : service[] = [
     {
         serviceName: "Рейтинг",
-        serviceImg: "",
+        serviceImg: "/src/assets/star.png",
     },
     {
         serviceName: "Продвижение",
-        serviceImg: "", 
+        serviceImg: "/src/assets/forwarding.png", 
     },
     {
         serviceName: "Финансы",
-        serviceImg: "", 
+        serviceImg: "/src/assets/finance.png", 
     },
     {
         serviceName: "Отзывы",

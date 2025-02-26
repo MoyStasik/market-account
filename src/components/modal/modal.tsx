@@ -1,6 +1,8 @@
-import { ReactElement, useEffect, useRef } from "react";
+import { createContext, ReactElement, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import "./modal.css"
+
+export const ModalContext = createContext(() => {});
 
 function Modal({children, open, handleSetIsModalOpen} : {children : ReactElement, open : boolean, handleSetIsModalOpen: (isOpen: boolean) => void}) {
     const modalRef = useRef<HTMLDialogElement | null>(null);
@@ -13,25 +15,21 @@ function Modal({children, open, handleSetIsModalOpen} : {children : ReactElement
             modalRef.current?.close();
         }
     }, [open])
-    
-    function handleModalClick(event:MouseEvent) {
-        if (event.target instanceof HTMLElement) {
-            if (event.target.className === "modal") {
-                handleCloseModal();
-            }
-        }
-    }
 
     const handleCloseModal = () => {
         handleSetIsModalOpen(!open);
     }
+
     
     return createPortal(
-        <dialog ref={modalRef} className="modal" onClick={handleModalClick}>
+        <dialog ref={modalRef} className="modal">
             <div className="header-modal">
                 <img className="header-modal__img" src="/src/assets/cancel.svg" alt="cnacel-modal" onClick={handleCloseModal} />
             </div>
-            {children}
+            <ModalContext.Provider value={handleCloseModal}>
+                {children}
+            </ModalContext.Provider>
+            
         </dialog>,
          document.getElementById("modal")!);
 }
