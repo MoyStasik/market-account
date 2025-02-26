@@ -1,11 +1,25 @@
 .form-content {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     justify-content: center;
     align-items: center;
 }
 
 .form-content__button {
     width: 100%;
+    margin-top: 15px;
+}
+
+.error-product-name__span,
+.error-price__span,
+.error-file__span {
+    color: tomato;
+    font-size: 14px;
+    font-family: var(--main-font-family);
+}
+
+.error-div {
+    width: 100%;
+    margin-left: 35px;
+    min-height: 14px;
 }

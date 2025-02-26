@@ -18,6 +18,7 @@
   /* --blue-color: rgb(49, 155, 217); */
   --blue-color: #64485c;
   --main-color: #83677b;
+  --main-font-family: sans-serif;
 }
 
 a {
