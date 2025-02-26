@@ -7,7 +7,7 @@ const router = createBrowserRouter([
         element: <App />,
         children:   [
             {
-                path: "/", element: < Content selectedService="Объявления"/>    
+                path: "/", element: <Content selectedService="Объявления"/>    
             },
             {
                 path: "/orders", element: <Content selectedService="Заказы"/>    

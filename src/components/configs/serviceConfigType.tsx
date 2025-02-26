@@ -5,6 +5,4 @@ export interface service {
 
 export interface serviceButton {
     service: service;
-    isActive: boolean;
-    // clickHandler : () => void;
 }

@@ -1,11 +1,8 @@
-import { useContext } from "react";
 import "./header.css";
-import ServiceContext from "../../contexts/AppContext";
 import { Link } from "react-router-dom";
 
-function Header() {
-    const {selectedService} = useContext(ServiceContext);
-    
+function Header({selectedService} : {selectedService: string} ) {
+
     return (
         <>
             <div className="header">
