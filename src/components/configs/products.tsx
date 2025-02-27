@@ -15,9 +15,9 @@ export const products : product[] = [
     },
     {
         id: 2,
-        imgPath: "/src/assets/boots.jpeg",
-        price: 2000,
-        productName: "Кроссовки Puma"
+        imgPath: "/src/assets/kofevarka.webp",
+        price: 12000,
+        productName: "Кофеварка"
     },
     {
         id: 4,

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
 import Content from "../components/content/content";
+import ProductInfoCard from "../components/productInfoCard/productInfoCard";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/support", element: <Content selectedService="Поддержка"/>    
+            },
+            {
+                path: "/product/:id", element: <ProductInfoCard />
             },
         ],
     },
