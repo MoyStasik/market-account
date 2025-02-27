@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
 import Content from "../components/content/content";
-import ProductInfoCard from "../components/productInfoCard/productInfoCard";
+import ProductInfoCard from "../components/productPage/productPage";
 
 const router = createBrowserRouter([
     {
